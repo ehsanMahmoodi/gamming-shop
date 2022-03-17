@@ -1,0 +1,8 @@
+{
+  "short_name": "Gamming Shop",
+  "name": "Create React Gamming Shop",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
