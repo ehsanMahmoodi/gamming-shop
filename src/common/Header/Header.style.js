@@ -2,6 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyle = makeStyles({
   header: {
+    zIndex:'2',
     backgroundColor: "#212121",
     minHeight: "4rem",
     display: "flex",
