@@ -8,4 +8,16 @@ export const useStyle = makeStyles({
       },
     },
   },
+  topSellingGameSection:{
+    "& >div":{
+      "@media(min-width:900px) and (max-width:1200px)":{
+        "&:nth-child(3)":{
+          display:"none"
+        },
+        "&:nth-child(5)":{
+          display:"none"
+        }
+      }
+    }
+  }
 });
