@@ -16,6 +16,7 @@ import { top_selling_games } from "../../data/top_selling_games";
 import { game_category_items } from "../../data/game_category_items";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Faq from "../../components/Faq/Faq";
+
 const Home = () => {
   // get css style
   const classes = useStyle();
