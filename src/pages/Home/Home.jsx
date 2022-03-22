@@ -15,6 +15,7 @@ import Tom_Clancys_Rainbow_Six_Siege from "../../assets/images/Tom-Clancys-Rainb
 import { top_selling_games } from "../../data/top_selling_games";
 import { game_category_items } from "../../data/game_category_items";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
+import Faq from "../../components/Faq/Faq";
 const Home = () => {
   // get css style
   const classes = useStyle();
@@ -31,7 +32,12 @@ const Home = () => {
           </Grid>
         </Grid>
         {/*Top Selling Games*/}
-        <Grid container spacing={5} className={classes.topSellingGameSection}>
+        <Grid
+          container
+          mb={2}
+          spacing={5}
+          className={classes.topSellingGameSection}
+        >
           <Grid item xs={12}>
             <SectionTitle
               title={"top selling games"}
@@ -54,7 +60,12 @@ const Home = () => {
           })}
         </Grid>
         {/*Game Category*/}
-        <Grid container spacing={5} className={classes.gameCategorySection}>
+        <Grid
+          container
+          mb={2}
+          spacing={4}
+          className={classes.gameCategorySection}
+        >
           <Grid item xs={12}>
             <SectionTitle title={"game category"} />
           </Grid>
@@ -65,6 +76,15 @@ const Home = () => {
               </Grid>
             );
           })}
+        </Grid>
+        {/*Faq*/}
+        <Grid container mb={2} spacing={4} className={classes.faqSection}>
+          <Grid item xs={12}>
+            <SectionTitle title={"faq"} />
+          </Grid>
+          <Grid item xs={12}>
+            <Faq />
+          </Grid>
         </Grid>
       </Container>
     </Layout>
