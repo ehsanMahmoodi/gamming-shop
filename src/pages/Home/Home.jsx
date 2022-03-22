@@ -13,6 +13,8 @@ import test from "../../assets/images/murdereo.jpg";
 import dishonored from "../../assets/images/dishonored-death-of-the-outsider.jpg";
 import Tom_Clancys_Rainbow_Six_Siege from "../../assets/images/Tom-Clancys-Rainbow-Six-Siege.jpg";
 import { top_selling_games } from "../../data/top_selling_games";
+import { game_category_items } from "../../data/game_category_items";
+import CategoryCard from "../../components/CategoryCard/CategoryCard";
 const Home = () => {
   // get css style
   const classes = useStyle();
@@ -47,6 +49,19 @@ const Home = () => {
                   gameXp={games.gameXp}
                   price={games.gamePrice}
                 />
+              </Grid>
+            );
+          })}
+        </Grid>
+        {/*Game Category*/}
+        <Grid container spacing={5} className={classes.gameCategorySection}>
+          <Grid item xs={12}>
+            <SectionTitle title={"game category"} />
+          </Grid>
+          {game_category_items.map((cateItem) => {
+            return (
+              <Grid key={cateItem.id} item xs={4} sm={4} md={2}>
+                <CategoryCard categoryItem={cateItem.text} />
               </Grid>
             );
           })}

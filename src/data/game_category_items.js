@@ -1,0 +1,26 @@
+export const game_category_items = [
+    {
+        id:0,
+        text:'strategic'
+    },
+    {
+        id:1,
+        text:'action'
+    },
+    {
+        id:2,
+        text:'horror'
+    },
+    {
+        id:3,
+        text:'adventure'
+    },
+    {
+        id:4,
+        text:'fighting'
+    },
+    {
+        id:5,
+        text:'racing'
+    },
+]

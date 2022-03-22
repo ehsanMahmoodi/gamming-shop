@@ -12,10 +12,14 @@ const SectionTitle = ({ title, textNavigate }) => {
         {title}
         <KeyboardArrowDown />
       </Typography>
-      <Link to={"/"}>
-        {textNavigate}
-        <ChevronRight />
-      </Link>
+      {textNavigate ? (
+        <Link to={"/"}>
+          {textNavigate}
+          <ChevronRight />
+        </Link>
+      ) : (
+        ""
+      )}
     </Box>
   );
 };
