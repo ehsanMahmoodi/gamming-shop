@@ -48,6 +48,7 @@ export const useStyle = makeStyles({
     },
   },
   siteAddress: {
+    paddingBottom: "0.68rem",
     display: "flex",
     justifyContent: "space-between",
     "@media(max-width:547px)": {

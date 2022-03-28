@@ -1,25 +1,22 @@
 import Layout from "../../Layout/Layout";
 import { Container, Grid } from "@mui/material";
 import BigSlider from "../../components/BigSlider/BigSlider";
-import small_slider from "../../assets/images/small-slider.jpg";
 import { useStyle } from "./Home.style";
 import SmallBaner from "../../components/SmallBaner/SmallBaner";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import GameCard from "../../components/GameCard/GameCard";
-import call_of_duty from "../../assets/images/call of duty black ops 3.jpg";
-import call_of_duty2 from "../../assets/images/gta v.png";
-import hitman from "../../assets/images/hitman-agent-47.jpg";
-import test from "../../assets/images/murdereo.jpg";
-import dishonored from "../../assets/images/dishonored-death-of-the-outsider.jpg";
-import Tom_Clancys_Rainbow_Six_Siege from "../../assets/images/Tom-Clancys-Rainbow-Six-Siege.jpg";
 import { top_selling_games } from "../../data/top_selling_games";
 import { game_category_items } from "../../data/game_category_items";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Faq from "../../components/Faq/Faq";
+import { useEffect } from "react";
 
 const Home = () => {
   // get css style
   const classes = useStyle();
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <Layout>
       <Container maxWidth={false}>
@@ -43,6 +40,7 @@ const Home = () => {
             <SectionTitle
               title={"top selling games"}
               textNavigate={"all games"}
+              pathName={"/all-games"}
             />
           </Grid>
           {top_selling_games.map((games) => {

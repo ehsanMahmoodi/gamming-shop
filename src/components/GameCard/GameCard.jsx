@@ -2,11 +2,20 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useStyle } from "./GameCard.style";
 import { Skeleton } from "@mui/material";
-const GameCard = ({ cardImg, gameName, price, gameXp, platform, imgAlt }) => {
+
+const GameCard = ({
+  cardImg,
+  gameName,
+  price,
+  gameXp,
+  platform,
+  imgAlt,
+  released,
+  updated,
+}) => {
   // get css style
   const classes = useStyle();
   return (
@@ -27,17 +36,29 @@ const GameCard = ({ cardImg, gameName, price, gameXp, platform, imgAlt }) => {
         </Typography>
       </CardContent>
       <CardContent className={classes.gamePlatforms}>
-        {platform.map((platformItem) => {
+        {platform?.map((platformItem) => {
           return (
             <Typography key={platformItem.id}>
               {platformItem.platform}
             </Typography>
           );
         })}
+        {released && updated ? (
+          <>
+            <Typography>released : {released}</Typography>
+            <Typography>updated : {updated}</Typography>
+          </>
+        ) : (
+          ""
+        )}
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Typography>{price}</Typography>
-        <Typography>{gameXp}xp</Typography>
+        {gameXp ? (
+          <Typography>{gameXp}xp</Typography>
+        ) : (
+          <button>Add to Cart</button>
+        )}
       </CardActions>
     </Card>
   );

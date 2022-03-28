@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useStyle } from "./SectionTitle.style";
 import { ChevronRight, KeyboardArrowDown } from "@mui/icons-material";
 
-const SectionTitle = ({ title, textNavigate }) => {
+const SectionTitle = ({ title, textNavigate,pathName }) => {
   // get css style
   const classes = useStyle();
   return (
@@ -13,7 +13,7 @@ const SectionTitle = ({ title, textNavigate }) => {
         <KeyboardArrowDown />
       </Typography>
       {textNavigate ? (
-        <Link to={"/"}>
+        <Link to={pathName}>
           {textNavigate}
           <ChevronRight />
         </Link>

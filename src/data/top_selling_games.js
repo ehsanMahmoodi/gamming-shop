@@ -4,7 +4,7 @@ export const top_selling_games = [
     gameName: "call of duty black ops 3",
     gameImg: "https://www.linkpicture.com/q/call-of-duty-black-ops-3_1.jpg",
     alt: "call of duty black ops 3",
-    gamePrice: "1000$",
+    gamePrice: "1000 $",
     gameXp: "+20",
     gamePlatform: [
       {
@@ -22,7 +22,7 @@ export const top_selling_games = [
     gameName: "grand theft auto",
     gameImg: "https://www.linkpicture.com/q/gta-v.png",
     alt: "grand theft auto",
-    gamePrice: "1500$",
+    gamePrice: "1500 $",
     gameXp: "+35",
     gamePlatform: [
       {
@@ -48,7 +48,7 @@ export const top_selling_games = [
     gameName: "hitman agent 47",
     gameImg: "https://www.linkpicture.com/q/hitman-agent-47.jpg",
     alt: "hitman agent 47",
-    gamePrice: "600$",
+    gamePrice: "600 $",
     gameXp: "+15",
     gamePlatform: [
       {
@@ -70,7 +70,7 @@ export const top_selling_games = [
     gameName: "murdereo soul suspect",
     gameImg: "https://www.linkpicture.com/q/murdereo.jpg",
     alt: "murdereo soul suspect",
-    gamePrice: "460$",
+    gamePrice: "460 $",
     gameXp: "+10",
     gamePlatform: [
       {
@@ -89,7 +89,7 @@ export const top_selling_games = [
     gameImg:
       "https://www.linkpicture.com/q/dishonored-death-of-the-outsider.jpg",
     alt: "dishonored-death-of-the-outsider",
-    gamePrice: "325$",
+    gamePrice: "325 $",
     gameXp: "+30",
     gamePlatform: [
       {
@@ -107,7 +107,7 @@ export const top_selling_games = [
     gameName: "tom clancys rainbow six siege",
     gameImg: "https://www.linkpicture.com/q/Tom-Clancys-Rainbow-Six-Siege.jpg",
     alt: "tom clancys rainbow six siege",
-    gamePrice: "250$",
+    gamePrice: "250 $",
     gameXp: "+15",
     gamePlatform: [
       {
