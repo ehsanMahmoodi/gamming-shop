@@ -33,6 +33,7 @@ const AllGames = () => {
                         return (
                             <Grid key={gameItem.id} item xs={12} sm={6} md={3}>
                                 <GameCard
+                                    gameId = {gameItem.id}
                                     imgAlt={gameItem.name}
                                     gameName={gameItem.name}
                                     price={"100 $"}

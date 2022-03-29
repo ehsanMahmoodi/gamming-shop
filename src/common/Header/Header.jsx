@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Badge, Box, Grid, Typography } from "@mui/material";
 import { useStyle } from "./Header.style";
 import { Search, ShoppingBasket, SportsEsports } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -8,6 +8,9 @@ import ListItemText from "@mui/material/ListItemText";
 import { useContext } from "react";
 import { PublicContext } from "../../context";
 import SearchBox from "./components/SearchBox/SearchBox";
+import { useSelector } from "react-redux";
+import gameCartSlice from "../../Redux/Slices/gameCartSlice";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   // get css style
@@ -19,7 +22,8 @@ const Header = () => {
     openCollapsedSearchBox,
     setOpenCollapsedSearchBox,
   } = useContext(PublicContext);
-
+  // get number of cart
+  const cartCount = useSelector((store) => store.gameCartSlice);
   return (
     <Box component={"header"} className={classes.header}>
       <Grid container className={"row"}>
@@ -31,8 +35,20 @@ const Header = () => {
           <SearchBox />
         </Grid>
         <Grid item xs={4} md={3} className={classes.cart}>
-          <Typography> cart</Typography>
-          <ShoppingBasket />
+          {cartCount.count ? (
+            <Badge
+              badgeContent={cartCount?.count ? cartCount.count : ""}
+              color="secondary"
+            >
+              <Link to={'/cart'}> cart
+              <ShoppingBasket />
+              </Link>
+            </Badge>
+          ) : (
+              <Link to={'/cart'}> cart
+                <ShoppingBasket />
+              </Link>
+          )}
         </Grid>
         <Grid item xs={6} className={classes.collapsedMenu}>
           <nav>

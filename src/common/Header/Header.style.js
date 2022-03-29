@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyle = makeStyles({
   header: {
-    zIndex:'2',
+    zIndex: "2",
     backgroundColor: "#212121",
     minHeight: "4rem",
     display: "flex",
@@ -45,11 +45,12 @@ export const useStyle = makeStyles({
   cart: {
     display: "flex",
     justifyContent: "flex-end",
-    "& p": {
-      fontSize: "1.18rem",
-    },
-    "& svg": {
-      marginLeft: "0.5rem",
+    "& a": {
+      display: "flex",
+      alignItems: "center",
+      "& svg": {
+        marginLeft: "0.5rem",
+      },
     },
     "@media(max-width:900px)": {
       display: "none",
