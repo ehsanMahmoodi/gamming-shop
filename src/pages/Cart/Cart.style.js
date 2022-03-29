@@ -2,6 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyle = makeStyles({
   cartList: {
+    minHeight: "calc(100vh - 26.76rem)",
     "& li:hover": {
       backgroundColor: "#3c3c3c7d",
     },
@@ -20,11 +21,11 @@ export const useStyle = makeStyles({
     },
   },
   clearCart: {
-      marginTop:'0.75rem',
+    marginTop: "0.75rem",
     display: "flex",
     justifyContent: "space-around",
-      '& button':{
-        height:'1.75rem'
-      }
+    "& button": {
+      height: "1.75rem",
+    },
   },
 });

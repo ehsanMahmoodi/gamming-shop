@@ -24,14 +24,15 @@ export const useStyle = makeStyles({
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
-    "& h5": {
+    "& a": {
       marginRight: "0.43rem",
+      fontSize: "1.5rem",
     },
     "@media(max-width:512px)": {
       "& svg": {
         display: "none",
       },
-      "& h5": {
+      "& a": {
         fontSize: "0.93rem",
       },
     },
@@ -50,6 +51,12 @@ export const useStyle = makeStyles({
       alignItems: "center",
       "& svg": {
         marginLeft: "0.5rem",
+      },
+      "&:hover": {
+        color: "#ffc41e",
+        "& svg": {
+          fill: "#ffc41e",
+        },
       },
     },
     "@media(max-width:900px)": {

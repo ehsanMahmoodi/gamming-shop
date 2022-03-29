@@ -28,7 +28,7 @@ const Header = () => {
     <Box component={"header"} className={classes.header}>
       <Grid container className={"row"}>
         <Grid item xs={6} md={4} className={classes.siteLogo}>
-          <Typography variant={"h5"}>Gamming Master</Typography>
+          <Link to={'/'}>Gamming Master</Link>
           <SportsEsports />
         </Grid>
         <Grid item xs={12} md={5} className={classes.headerSearchBox}>
