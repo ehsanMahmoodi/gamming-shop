@@ -1,6 +1,6 @@
 import {Box, Typography} from "@mui/material";
 
-const NotingData = () => {
+const EmtyCart = () => {
     return (
        <Box sx={{
            maxWidth: "500px",
@@ -1710,4 +1710,4 @@ const NotingData = () => {
        </Box>
     )
 }
-export default NotingData
+export default EmtyCart

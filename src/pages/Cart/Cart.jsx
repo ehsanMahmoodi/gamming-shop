@@ -19,7 +19,7 @@ import { DeleteOutline } from "@mui/icons-material";
 import List from "@mui/material/List";
 import { useStyle } from "./Cart.style";
 import {Fragment, useEffect} from "react";
-import NotingData from "../../components/NotingData/NotingData";
+import EmtyCart from "../../components/EmtyCart/EmtyCart";
 const Cart = () => {
   //  get css style
   const classes = useStyle();
@@ -79,7 +79,7 @@ const Cart = () => {
                   </Button>
                   <Button variant="contained">Buy</Button>
                 </Box>
-              </> : <NotingData/>
+              </> : <EmtyCart/>
             }
 
           </Grid>
